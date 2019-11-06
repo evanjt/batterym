@@ -69,7 +69,7 @@ class BatteryData:
         return t
 
 
-def caluclate_chart(image_path, battery_data):
+def calculate_chart(image_path, battery_data):
     plot_data = extract_plot_data(
         battery_data.history, battery_data.future)
     create_chart(plot_data, image_path)
@@ -77,7 +77,7 @@ def caluclate_chart(image_path, battery_data):
 
 # def main():
 #     battery_data = BatteryData()
-#     caluclate_chart('capacity_history_12h.svg', battery_data)
+#     calculate_chart('capacity_history_12h.svg', battery_data)
 
 
 # if __name__ == '__main__':

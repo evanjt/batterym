@@ -136,7 +136,7 @@ class History:
         for e in data:
             e['virtual_time_hour'] += self._plot_xoffset
         data = separate_by_sequence_id(data)
-        # exptract plot data
+        # extract plot data
         self._plot_data = [extract_plot_data(batch) for batch in data]
 
     def plot_data(self, status):

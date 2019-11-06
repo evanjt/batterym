@@ -83,7 +83,7 @@ class Indicator:
 
     def update_chart(self):
         self.battery_data = plotter.BatteryData()
-        plotter.caluclate_chart(
+        plotter.calculate_chart(
             CAPACITY_HISTORY_CHART, self.battery_data)
         if self.window and self.window.props.visible:
             self.image.set_from_file(CAPACITY_HISTORY_CHART)

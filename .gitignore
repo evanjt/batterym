@@ -6,3 +6,4 @@ htmlcov/
 build
 install_log.txt
 README.html
+.directory
