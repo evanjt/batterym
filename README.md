@@ -39,6 +39,13 @@ Predicted time-to-end is a rough estimation. In order not to give a false feelin
 - up to 30 minutes for values within 12...24 hours
 - up to 1 hour for values higher than 24 hours
 
+- up to 1 minute for values within 0...2 hours
+- up to 5 minutes for values within 2...4 hours
+- up to 10 minutes for values within 4...8 hours
+- up to 20 minutes for values within 8...12 hours
+- up to 30 minutes for values within 12...24 hours
+- up to 1 hour for values higher than 24 hours
+
 <a name="screenshots"></a>
 ## Screenshots
 
@@ -88,6 +95,11 @@ How to read this information:
 - it took about 2.5 hours to fully charge (almost as predicted!!!)
 
 <a name="prediction-algorithm"></a>
+
+- charging, current capacity is 100%, fully charged
+- it took about 2.5 hours to fully charge (almost as predicted!!!)
+
+<a name="prediction-algorithm"></a>
 ## Prediction Algorithm
 
 Given capacity history logs it's possible to calculate slopes in every point. Collect all the slopes and put them in buckets according to capacity percentage (with 1% step, blue dots). Then calculate slopes for different percentiles (10%, 50%, 90%) and connect the dots (red lines).
@@ -100,7 +112,7 @@ There are three charging timelines for different percentiles (10%, 50%, 90%). Ho
 
 - 10% of cases charged from 0% to 100% in less than ~2.3 hours
 - 50% of cases charged from 0% to 100% in less than ~2.8 hours
-- 90% of cases charged from 0% to 100% in less than ~5.7 hours
+- 90% of cases charged from 0% to 100% in less than ~4 hours
 
 <div style="text-align:center"><img src ="img/reconstructed_charge.png" /></div>
 
@@ -111,7 +123,7 @@ Slopes:
 
 Timelines:
 
-- 10% of cases discharged from 100% to 0% in less than ~4.5 hours
+- 10% of cases discharged from 100% to 0% in less than ~5.5 hours
 - 50% of cases discharged from 100% to 0% in less than ~7.5 hours
 - 90% of cases discharged from 100% to 0% in less than ~11 hours
 
